@@ -4,7 +4,20 @@ public class VPMain {
     VirtualPet vp = new VirtualPet();
     
     public VPMain(){
-        vp.feed()
+        vp.feed();
+        vp.exercise();
+        this.waitABeat(1000);
+        String ans =this.askForInput("Are you ready to sleep?");
+        if(ans.equals ("yes")){
+            vp.sleep();
+            this.waitABeat(2000);
+            String ans1 = this.askForInput("Do you want to fly?");
+            if(ans.equals ("yes")){
+                vp.flight();
+            }
+        } else {
+            vp.exercise();
+        }
     }
 
     public void waitABeat(int ms){

@@ -36,4 +36,9 @@ public class VirtualPet {
         face.setImage("asleep");
     }
 
+    public void flight() {
+        face.setImage("angel");
+        face.setMessage("I believe I can fly");
+    }
+
 } // end Virtual Pet
