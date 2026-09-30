@@ -6,39 +6,60 @@
 public class VirtualPet {
     
     VirtualPetFace face;
-    int hunger = 0;   // how hungry the pet is.
+    boolean alive = true;
+    int lives = 3;
     
     // constructor
     public VirtualPet() {
         face = new VirtualPetFace();
         face.setImage("normal");
-        face.setMessage("Hello.");
-    }
-    
-    public void feed() {
-        if (hunger > 10) {
-            hunger = hunger - 10;
-        } else {
-            hunger = 0;
-        }
-        face.setMessage("Yum, thanks");
-        face.setImage("normal");
-    }
-    
-    public void exercise() {
-        hunger = hunger + 3;
-        face.setMessage("1, 2, 3, jump.  Whew.");
-        face.setImage("tired");
-    }
-    
-    public void sleep() {
-        hunger = hunger + 1;
-        face.setImage("asleep");
+        face.setMessage("Hello. All answers in lower case please.");
     }
 
-    public void flight() {
-        face.setImage("angel");
-        face.setMessage("I believe I can fly");
+    public void correct(){
+        face.setImage("ecstatic");
+        face.setMessage("Nice job!");
     }
+
+    public void incorrect(){
+        this.lives -= 1;
+        if (lives == 2){
+            face.setImage("sad");
+        } else if (lives == 1) {
+            face.setImage("verysad");
+        } else {
+            face.setImage("cry");
+        }
+        face.setMessage("Incorrect. " + lives + " lives remaining.");
+    }
+
+    public void dead() {
+        this.alive = false;
+        face.setImage("dead");
+    }
+
+    public void decay(){
+        face.setImage("skeleton");
+    }
+
+    public void heGawn(){
+        face.setImage("pushingdaisies");
+    }
+
+    public void angel(){
+        face.setImage("angel");
+    }
+
+    public void youWin(){
+        face.setImage("joyful");
+        face.setMessage("You Win!");
+    }
+
+    public void extraLife(){
+        this.lives += 1;
+        face.setImage("love");
+        face.setMessage("You get an extra life!");
+    }
+
 
 } // end Virtual Pet
