@@ -119,22 +119,6 @@ public class VPMain {
             } 
        }
        waitABeat(1000);
-       String i = this.askForInput("What animal native to California has no native predators?");
-       if (i.equals("banana slug")){
-            vp.correct();
-       } else {
-            vp.incorrect();
-            if (vp.lives < 1){
-                vp.dead();
-                waitABeat(1000);
-                vp.decay();
-                waitABeat(1000);
-                vp.heGawn();
-                waitABeat(5000);
-                System.exit(0);
-            } 
-       }
-       waitABeat(1000);
        String j = this.askForInput("What is the name of Mr. Morris' son?");
        if (j.equals("kaelin")){
             vp.correct();
