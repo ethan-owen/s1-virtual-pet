@@ -319,8 +319,8 @@ public class VPMain {
             } 
        }
        waitABeat(1000);
-       String v = this.askForInput("What is the derivative of e?");
-       if (v.equals("e")){
+       String v = this.askForInput("What is Mr. Morris' last name?");
+       if (v.equals("morris")){
             vp.correct();
        } else {
             vp.incorrect();
@@ -335,7 +335,7 @@ public class VPMain {
             } 
        }
        waitABeat(1000);
-       String w = this.askForInput("What is the largest fish in the world?");
+       String w = this.askForInput("What is the largest fih in the world?");
        if (w.equals("whale shark")){
             vp.correct();
        } else {
@@ -447,7 +447,7 @@ public class VPMain {
             } 
        }
        waitABeat(1000);
-       String d1 = this.askForInput("Name the shorter owner of Wrexham Football Club");
+       String d1 = this.askForInput("Name the shorter owner (height) of Wrexham Football Club");
        if (d1.equals("rob mcelhenney")){
             vp.correct();
        } else {
@@ -720,7 +720,7 @@ public class VPMain {
        }
        waitABeat(1000); 
        String u1 = this.askForInput("What country is Sydney Lopez Cabral from?");
-       if (u1.equals("Cape Verde")){
+       if (u1.equals("cape verde")){
             vp.correct();
        } else {
             vp.incorrect();

@@ -39,7 +39,7 @@ public class VirtualPet {
     }
 
     public void decay(){
-        face.setImage("skeleton");
+        face.setImage("RIP");
     }
 
     public void heGawn(){
