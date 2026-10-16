@@ -1,9 +1,6 @@
 import javax.swing.*;
 
 
-
-
-
 public class VPMain {
     VirtualPet vp = new VirtualPet();
     
